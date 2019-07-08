@@ -24,7 +24,9 @@ h1{
 	text-align:center;
 }
 
-
+#tarjeta, #fecha_tarjeta, #email{
+  background-color: #F93;
+}
 
 
 
@@ -36,25 +38,21 @@ h1{
 	$(document).ready(function() {
 		
       $("#paypal").click(function(){//inicio paypal
-        $("#email").attr("disabled", false).focus();
-        $("#fecha_tarjeta").attr("disabled", true).focus();
-        $("#tarjeta").attr("disabled", true).focus();
-
+        $("#email").attr("disabled", false).focus().css("background-color","#FFF");
+        $("#fecha_tarjeta").attr("disabled", true).focus().css("background-color","#F93");
+        $("#tarjeta").attr("disabled", true).focus().css("background-color","#F93");
       });//fin paypal
 
       $("#master").click(function(){//inicio mastercard
-        $("#email").attr("disabled", true).focus();
-        $("#fecha_tarjeta").attr("disabled", false).focus();
-        $("#tarjeta").attr("disabled", true).focus();
-
-
+        $("#email").attr("disabled", true).focus().css("background-color","#F93");
+        $("#fecha_tarjeta").attr("disabled", false).focus().css("background-color","#FFF");
+        $("#tarjeta").attr("disabled", true).focus().css("background-color","#F93");
       });//fin mastercard
 
       $("#visa").click(function(){//inicio visa
-        $("#email").attr("disabled", true).focus();
-        $("#fecha_tarjeta").attr("disabled", true).focus();
-        $("#tarjeta").attr("disabled", false).focus();
-
+        $("#email").attr("disabled", true).focus().css("background-color","#F93");
+        $("#fecha_tarjeta").attr("disabled", true).focus().css("background-color","#F93");
+        $("#tarjeta").attr("disabled", false).focus().css("background-color","#FFF");
       });//fin visa      		
 		
 	});
