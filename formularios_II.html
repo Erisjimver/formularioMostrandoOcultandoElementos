@@ -35,10 +35,30 @@ h1{
 
 	$(document).ready(function() {
 		
-	
-		
+      $("#paypal").click(function(){//inicio paypal
+        $("#email").attr("disabled", false).focus();
+        $("#fecha_tarjeta").attr("disabled", true).focus();
+        $("#tarjeta").attr("disabled", true).focus();
+
+      });//fin paypal
+
+      $("#master").click(function(){//inicio mastercard
+        $("#email").attr("disabled", true).focus();
+        $("#fecha_tarjeta").attr("disabled", false).focus();
+        $("#tarjeta").attr("disabled", true).focus();
+
+
+      });//fin mastercard
+
+      $("#visa").click(function(){//inicio visa
+        $("#email").attr("disabled", true).focus();
+        $("#fecha_tarjeta").attr("disabled", true).focus();
+        $("#tarjeta").attr("disabled", false).focus();
+
+      });//fin visa      		
 		
 	});
+
 </script>
 </head>
 
@@ -89,17 +109,17 @@ h1{
         <tr>
           <td><label for="tarjeta" id="n_tarjeta">Nº tarjeta</label></td>
           <td>
-            <input type="text" name="tarjeta" id="tarjeta" ></td>
+            <input type="text" name="tarjeta" id="tarjeta" disabled></td>
         </tr>
         <tr>
           <td align="left"><label for="fecha_tarjeta" id="f_tarjeta">Fecha Expiración</label></td>
           <td>
-            <input type="text" name="fecha_tarjeta" id="fecha_tarjeta"   ></td>
+            <input type="text" name="fecha_tarjeta" id="fecha_tarjeta" disabled></td>
         </tr>
         <tr>
         <td><label for="email" id="e_mail">Email</label></td>
         <td>
-          <input type="text" name="email" id="email"  ></td>
+          <input type="text" name="email" id="email" disabled></td>
         </tr>
         
        
